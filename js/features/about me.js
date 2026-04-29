@@ -3,7 +3,7 @@ function renderAboutMe() {
   if (!container) return;
 
   container.innerHTML = `
-    <p class="text-xl text-600 dark:text-300 mx-auto text-left md:text-center leading-relaxed text-gray-700">
+    <p class="text-xl text-gray-700 dark:text-gray-200 mx-auto text-left md:text-center leading-relaxed font-medium">
       ${aboutMeData}
     </p>
   `;

@@ -16,16 +16,16 @@ function renderSkills() {
         
         categories.forEach(category => {
             const btn = document.createElement("button");
-            btn.className = `px-4 py-2 ${category === "All" ? "bg-blue-600 text-white" : "bg-white text-blue-600"} rounded font-bold shadow hover:bg-blue-500 hover:text-white transition-colors`;
+            btn.className = `px-4 py-2 ${category === "All" ? "glass-button !bg-red-600 text-white font-black shadow-[0_0_15px_rgba(220,38,38,0.5)] border-red-500" : "glass-button text-red-600 dark:text-red-400"} rounded-xl font-bold transition-all`;
             btn.textContent = category;
             
             btn.addEventListener("click", () => {
                 currentCategory = category;
                 // update active state
                 Array.from(skillsFilters.children).forEach(child => {
-                    child.className = `px-4 py-2 bg-white text-blue-600 rounded font-bold shadow hover:bg-blue-500 hover:text-white transition-colors`;
+                    child.className = `px-4 py-2 glass-button text-red-600 dark:text-red-400 rounded-xl font-bold transition-all`;
                 });
-                btn.className = `px-4 py-2 bg-blue-600 text-white rounded font-bold shadow hover:bg-blue-500 hover:text-white transition-colors`;
+                btn.className = `px-4 py-2 glass-button !bg-red-600 text-white font-black shadow-[0_0_15px_rgba(220,38,38,0.5)] border-red-500 rounded-xl transition-all`;
                 
                 renderFilteredSkills();
             });
@@ -41,15 +41,15 @@ function renderSkills() {
         filtered.forEach(function (skill) {
             //to create outer card
             const card = document.createElement("div");
-            card.className = "p-8 text-center bg-white rounded-3xl shadow-lg";
+            card.className = "p-8 text-center glass-card hover:scale-[1.05] transition-all duration-300 shadow-xl border-t border-l border-white/50 dark:border-white/20 bg-white/30 dark:bg-slate-800/40 backdrop-blur-xl group";
 
             //create icon
             const iconBox = document.createElement("div");
-            iconBox.className = "w-20 h-20 mx-auto mb-4 bg-green-900 rounded-2xl flex items-center justify-center";
+            iconBox.className = "w-20 h-20 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-gradient-to-br from-red-600 to-orange-500 shadow-[0_0_25px_rgba(239,68,68,0.6)] border border-red-400/50 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300";
 
             //create icon text
             const iconText = document.createElement("span");
-            iconText.className = "text-2xl text-white font-bold";
+            iconText.className = "text-3xl text-white font-black drop-shadow-md";
             iconText.textContent = skill.shortLabel;
 
             //Put icon text inside icon box
@@ -57,12 +57,12 @@ function renderSkills() {
 
             // create skill name 
             const skillName = document.createElement("h3");
-            skillName.className = "text-xl font-bold mb-2";
+            skillName.className = "text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-500 dark:from-red-500 dark:to-orange-400 mb-2 drop-shadow-sm";
             skillName.textContent = skill.name;
 
             //create skill desc
             const skillDescription = document.createElement("p");
-            skillDescription.className = "text-sm text-gray-600";
+            skillDescription.className = "text-md text-slate-700 dark:text-slate-300 font-medium";
             skillDescription.textContent = skill.description;
 
             // Append all child elements to card

@@ -29,10 +29,10 @@ function initRecentlyViewed() {
         if (!project) return;
 
         const card = document.createElement("div");
-        card.className = "px-8 py-6 text-center bg-gray-50 rounded-3xl shadow border cursor-pointer";
+        card.className = "px-8 py-6 text-center glass-card cursor-pointer hover:scale-[1.03] transition-all duration-300 shadow-xl border-t border-l border-white/50 dark:border-white/20 bg-white/30 dark:bg-slate-800/40 backdrop-blur-xl group";
 
         const title = document.createElement("h4");
-        title.className = "text-lg font-bold mb-2";
+        title.className = "text-xl font-black bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-400 mb-2";
         title.textContent = project.name;
 
         const category = document.createElement("span");
