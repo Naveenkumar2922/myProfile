@@ -1,0 +1,20 @@
+.dark-mode{
+    background-color: black;
+    color:white;
+}
+.dark-mode nav{
+    background-color: gray;
+    color: white;
+}
+.dark-mode section{
+    background-color: whitesmoke;
+    color: white;
+}
+.dark-mode.bg-black-100{
+    background-color: beige;
+    color:azure;
+}
+.dark-mode.text-red-100{
+    background-color: antiquewhite;
+    color: aqua;
+}
